@@ -7,7 +7,8 @@ let prevNotes = '';
 let answerObj;
 let nextBtn;
 
-
+// 楽譜をセットする。
+// play=Trueで音を鳴らし、hide=Trueで楽譜を隠す
 function setAudio(notes, play, hide, clef) {
     function hideNote() {
         const staffNotation = document.querySelector('#score > svg');
