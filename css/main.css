@@ -22,7 +22,7 @@ summary::-webkit-details-marker {
 }
 .settings {
     padding: 10px;
-    width: 230px;
+    width: 245px;
     background-color: white;
     color: black;
     border: solid black 1px;
@@ -45,7 +45,7 @@ summary::-webkit-details-marker {
     display: inline;
 }
 .input-box > select {
-    width: 100px;
+    width: 115px;
 }
 main {
     height: calc(100svh - 80px);
