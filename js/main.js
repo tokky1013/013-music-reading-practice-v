@@ -122,6 +122,16 @@ function next() {
     else createQuestion();
 }
 
+// 相対音感モードの説明の表示/非表示を切り替える
+function setExplanation() {
+    const style = document.getElementsByClassName('explanation-relative')[0].style;
+    if(document.getElementById('mode').value === 'relative' && document.getElementById('hint').value !== 'sheet-only') {
+        style.display = 'block';
+    }else {
+        style.display = 'none';
+    }
+}
+
 window.onload = () => {
     answerObj = document.getElementById('answer');
     nextBtn = document.getElementById('next');
@@ -141,13 +151,10 @@ window.onload = () => {
         }else {
             document.getElementById('mode-select').style.display = 'block';
         }
+        setExplanation();
     }, false);
 
     document.getElementById('mode').addEventListener('change', (e) => {
-        if(document.getElementById('mode').value === 'relative') {
-            document.getElementsByClassName('explanation-relative')[0].style.display = 'block';
-        }else {
-            document.getElementsByClassName('explanation-relative')[0].style.display = 'none';
-        }
+        setExplanation();
     }, false);
 }
