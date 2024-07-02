@@ -58,10 +58,6 @@ main {
     flex: 1;
 }
 
-#score {
-    /* width: 100vw; */
-    /* display: block; */
-}
 
 #play {
     margin: 10px 0;

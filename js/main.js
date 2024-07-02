@@ -142,4 +142,12 @@ window.onload = () => {
             document.getElementById('mode-select').style.display = 'block';
         }
     }, false);
+
+    document.getElementById('mode').addEventListener('change', (e) => {
+        if(document.getElementById('mode').value === 'relative') {
+            document.getElementsByClassName('explanation-relative')[0].style.display = 'block';
+        }else {
+            document.getElementsByClassName('explanation-relative')[0].style.display = 'none';
+        }
+    }, false);
 }
