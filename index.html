@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/abcjs-audio.css">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>読譜練習用ツール</title>
+</head>
+<body>
+    <header>
+        <h2>読譜練習用ツール</h2>
+        <details id="setting">
+            <summary class="icon options"></summary>
+            <div class="settings">
+                <h2>設定</h2>
+                <div class="input-box">
+                    <h3>種類</h3>
+                    <select name="category" id="category">
+                        <option value="single">単音</option>
+                        <option value="harmoniy" selected>和音</option>
+                        <option value="both">両方</option>
+                    </select>
+                </div>
+                <div class="spacer20"></div>
+                <div class="input-box">
+                    <h3>音部記号</h3>
+                    <select name="clef" id="clef">
+                        <option value="G">ト音記号</option>
+                        <option value="F">へ音記号</option>
+                        <option value="both">両方</option>
+                    </select>
+                </div>
+                <div class="spacer20"></div>
+                <div class="input-box">
+                    <h3>制限</h3>
+                    <select name="hint" id="hint">
+                        <option value="sheet-only">楽譜のみ</option>
+                        <option value="sound-only">音のみ</option>
+                        <option value="both" selected>なし</option>
+                    </select>
+                </div>
+                <div id="mode-select">
+                    <div class="spacer20"></div>
+                    <div class="input-box">
+                        <h3>モード</h3>
+                        <select name="mode" id="mode">
+                            <option value="relative">相対音感</option>
+                            <option value="absolute">絶対音感</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </details>
+    </header>
+    <main>
+        <div id="score"></div>
+        <button id="play">Play</button>
+        <div id="answer"></div>
+        <div class="spacer"></div>
+        <button id="next" onclick="next();">始める</button>
+    </main>
+    
+    <script type="text/javascript" src="./js/abcjs-basic-min.js"></script>
+    <script type="text/javascript" src="./js/notes.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+</body>
+</html>

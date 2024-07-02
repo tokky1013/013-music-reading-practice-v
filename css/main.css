@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+header {
+    height: 40px;
+    background-color: rgb(40, 40, 40);
+    color: white;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header > h2 {
+    margin: 0;
+}
+summary {
+    display: block;
+    list-style: none;
+}
+summary::-webkit-details-marker {
+    display:none;
+}
+.settings {
+    padding: 10px;
+    width: 230px;
+    background-color: white;
+    color: black;
+    border: solid black 1px;
+    position: absolute;
+    right: 10px;
+    z-index: 1;
+}
+.settings > h2 {
+    margin: 0 0 10px;
+}
+
+.input-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20px;
+}
+.input-box > h3 {
+    margin: 0;
+    display: inline;
+}
+.input-box > select {
+    width: 100px;
+}
+main {
+    height: calc(100svh - 80px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.spacer20 {height: 20px;}
+.spacer {
+    flex: 1;
+}
+
+#score {
+    /* width: 100vw; */
+    /* display: block; */
+}
+
+#play {
+    margin: 10px 0;
+}
+
+#next {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    width: 200px;
+    margin: 30px auto;
+    padding: .5rem .4rem .5rem .3rem;
+    font-weight: bold;
+    font-size: large;
+    background: #303030;
+    color: #fff;
+    border-radius: 100vh;
+    position: relative;
+    transition: transform .2s;
+    &:active{
+        transform: scale(.95);
+    }
+}
+
+#answer {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+@font-face {
+    font-family: LigatureSymbols;
+    src: url("../font/LigatureSymbols-2.11.ttf") format("truetype");
+}
+.icon {
+    font-family: LigatureSymbols;
+    font-size: 2em;
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+}
+.icon.options::before {
+    content: "\E055";
+}
